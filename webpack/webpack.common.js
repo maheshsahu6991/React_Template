@@ -10,7 +10,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(?ts|js)x$/,
+        test: /\.(ts|js)x$/,
         exclude: /node_modules/,
         use: [
           {
@@ -39,9 +39,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '..', './src/index.html'),
-    }),
-    new copyPlugin({
-      patterns: [{ from: 'source', to: 'dest' }],
     }),
   ],
   stats: 'errors-only',
